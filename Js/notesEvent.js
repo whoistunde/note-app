@@ -130,16 +130,11 @@ document.addEventListener('DOMContentLoaded', () => {
     notesContentTitle.focus();
 });
 
-const toggleButton = document.querySelector('.toggle-button');
+const offCanvas = document.querySelector('.offcanvas-body');
 const notesSidebar = document.querySelector('.notes__sidebar');
+if (window.innerWidth < 991) {
+    notesSidebar.removeChild(listContainer);
+    offCanvas.appendChild(listContainer);
+}
 
-toggleButton.addEventListener('click', () => {
-    notesSidebar.classList.toggle('active');
-});
-
-document.querySelector('body').addEventListener('click', (e) => {
-    if (e.target.classList.contains('main')) {
-        notesSidebar.classList.remove('active');
-    }
-});
 

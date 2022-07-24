@@ -10,20 +10,36 @@
     </head>
     <body>
         <div class="notes" id="app">
-            <a href="#" class="toggle-button">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </a>
-            <div class="notes__sidebar">
-                <button class="notes__save">Save note</button>
-                <div id="list__container"> </div>
+            <div class="nav-container">
+                <nav class="navBar navbar navbar-expand-lg navbar-light mb-4" id="navbar">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="index.html">Notes App</a>
+                            <button class="navbar-toggler toggle-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarExample-expand-lg" aria-controls="offcanvasNavbarExample-expand-lg">
+                                <span class="navbar-toggler-icon" data-bs-target="#offcanvasNavbarExample-expand-lg"></span>
+                            </button>
+                        <div class="offcanvas offcanvas-start bg-primary" data-bs-hideresize="true" tabindex="-1" id="offcanvasNavbarExample-expand-lg" aria-labelledby="offcanvasNavbarExample-expand-lg">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasLabel" style="color:white;">Notes</h5>
+                                <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body bg-light">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </nav> 
             </div>
-            <div class="notes__content">
-                <span hidden class="hidden__id"></span>
-                <input class="main notes__content-title" type="text" placeholder="Title...">
-                <textarea class="main notes__content-body" placeholder="Take note..."> </textarea>
-            </div>
+            <div class="inputs-container">
+                <div class="notes__sidebar">
+                    <button class="notes__save">Save note</button>
+                    <div id="list__container"> </div>
+                </div>
+                <div class="notes__content">
+                    <span hidden class="hidden__id"></span>
+                    <input class="main notes__content-title" type="text" placeholder="Title...">
+                    <textarea class="main notes__content-body" placeholder="Take note..."> </textarea>
+                </div>
+            </div> 
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <script src="./Js/notesAPI.js"></script>
